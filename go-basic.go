@@ -4,13 +4,24 @@ import "fmt"
 
 func main() {
 
-	fmt.Println(returnText())
+	// fmt.Println(returnText())
 
-	fmt.Println(tshirt(24, "€"))
+	// fmt.Println(tshirt(24, "€"))
 
-	fmt.Println(returnText2())
+	// fmt.Println(returnText2())
 
-	fmt.Println(tshirt(45, "$"))
+	// fmt.Println(tshirt(45, "$"))
+
+	pants("Red", "large", "adidas")
+
+}
+
+func pants(atributes ...string) {
+
+	for _, atribute := range atributes {
+		fmt.Println(atribute)
+	}
+
 }
 
 // recibe una variable de tipo float32 y devuelve un string y un float32
