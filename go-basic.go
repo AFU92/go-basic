@@ -4,47 +4,31 @@ import "fmt"
 
 func main() {
 
-	// fmt.Println(returnText())
+	// Array movies
 
-	// fmt.Println(tshirt(24, "€"))
+	var movies [3]string
 
-	// fmt.Println(returnText2())
+	movies[0] = "The notebook"
+	movies[1] = "ant-man"
+	movies[2] = "avengers"
 
-	// fmt.Println(tshirt(45, "$"))
+	fmt.Println("\nMovies list:")
+	fmt.Println(movies)
 
-	pants("Red", "large", "adidas")
+	fmt.Println("\nMovie #2:\n" + movies[1])
 
-}
+	// Array series
+	var series = [4]string{
+		"defenders",
+		"daredevil",
+		"iron fist",
+		"titans"}
 
-func pants(atributes ...string) {
+	fmt.Println("\nSeries list:")
+	fmt.Println(series)
 
-	for _, atribute := range atributes {
-		fmt.Println(atribute)
-	}
-
-}
-
-// recibe una variable de tipo float32 y devuelve un string y un float32
-func tshirt(order float32, money string) (string, string, float32) {
-
-	price := func() float32 {
-		return order * 7
-	}
-
-	return "The total price is: ", money, price()
-}
-
-// Return 1
-func returnText() (string, string, int) {
-	data1 := "Order"
-	data2 := "No."
-	data3 := 1
-	return data1, data2, data3
-}
-
-// Return 2
-func returnText2() (data4 string, data5 int) {
-	data4 = "Order No."
-	data5 = 2
-	return
+	// Array primes
+	primes := [6]int{2, 3, 5, 7, 11, 13}
+	fmt.Println("\nprimes number list:")
+	fmt.Println(primes)
 }
