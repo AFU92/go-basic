@@ -4,47 +4,81 @@ import "fmt"
 
 func main() {
 
-	// fmt.Println(returnText())
+	var colors [3]string
 
-	// fmt.Println(tshirt(24, "€"))
+	colors[0] = "Blue"
+	colors[1] = "Yellow"
+	colors[2] = "Red"
 
-	// fmt.Println(returnText2())
+	fmt.Println("\nColors list:")
+	fmt.Println(colors)
 
-	// fmt.Println(tshirt(45, "$"))
+	fmt.Println("\nColor #2:\n" + colors[1])
 
-	pants("Red", "large", "adidas")
+	// Array de arrays movies
 
-}
+	var movies [3][2]string
 
-func pants(atributes ...string) {
+	movies[0][0] = "The notebook"
+	movies[0][1] = "Titanic"
 
-	for _, atribute := range atributes {
-		fmt.Println(atribute)
-	}
+	movies[1][0] = "ant-man"
+	movies[1][1] = "avengers"
 
-}
+	movies[2][0] = "toy story"
+	movies[2][1] = "frozen"
 
-// recibe una variable de tipo float32 y devuelve un string y un float32
-func tshirt(order float32, money string) (string, string, float32) {
+	fmt.Println("\nMovies list:")
+	fmt.Println(movies)
 
-	price := func() float32 {
-		return order * 7
-	}
+	fmt.Println("\nMovies array #2:")
+	fmt.Println(movies[1])
 
-	return "The total price is: ", money, price()
-}
+	fmt.Println("\nMovie #2.2:")
+	fmt.Println(movies[1][1])
 
-// Return 1
-func returnText() (string, string, int) {
-	data1 := "Order"
-	data2 := "No."
-	data3 := 1
-	return data1, data2, data3
-}
+	// Array series
+	var series = [4]string{
+		"defenders",
+		"daredevil",
+		"iron fist",
+		"titans"}
 
-// Return 2
-func returnText2() (data4 string, data5 int) {
-	data4 = "Order No."
-	data5 = 2
-	return
+	fmt.Println("\nSeries list:")
+	fmt.Println(series)
+
+	// Array primes
+	primes := [6]int{2, 3, 5, 7, 11, 13}
+	fmt.Println("\nprimes number list:")
+	fmt.Println(primes)
+
+	// Slices // Array dinamico de n elementos
+	var heros = []string{
+		"Batman",
+		"Luke Cage",
+		"Wonder woman",
+		"Daredevil",
+		"IronMan",
+		"Thor",
+		"Captain America",
+		"Iron Fist",
+		"Jessica Jones"}
+
+	// Agregar nuevos elementos
+	heros = append(heros, "Superman")
+	heros = append(heros, "Flash")
+
+	fmt.Println("\nHeros list:")
+	fmt.Println(heros)
+
+	//Longitud del slice
+
+	fmt.Println("\nTota Heros:")
+	fmt.Println(len(heros))
+
+	//Tomar solo una cantidad de elementos delimitados
+
+	fmt.Println("\nParcial Heros list:")
+	fmt.Println(heros[8:11])
+
 }
