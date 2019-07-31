@@ -4,18 +4,38 @@ import "fmt"
 
 func main() {
 
-	// Array movies
+	var colors [3]string
 
-	var movies [3]string
+	colors[0] = "Blue"
+	colors[1] = "Yellow"
+	colors[2] = "Red"
 
-	movies[0] = "The notebook"
-	movies[1] = "ant-man"
-	movies[2] = "avengers"
+	fmt.Println("\nColors list:")
+	fmt.Println(colors)
+
+	fmt.Println("\nColor #2:\n" + colors[1])
+
+	// Array de arrays movies
+
+	var movies [3][2]string
+
+	movies[0][0] = "The notebook"
+	movies[0][1] = "Titanic"
+
+	movies[1][0] = "ant-man"
+	movies[1][1] = "avengers"
+
+	movies[2][0] = "toy story"
+	movies[2][1] = "frozen"
 
 	fmt.Println("\nMovies list:")
 	fmt.Println(movies)
 
-	fmt.Println("\nMovie #2:\n" + movies[1])
+	fmt.Println("\nMovies array #2:")
+	fmt.Println(movies[1])
+
+	fmt.Println("\nMovie #2.2:")
+	fmt.Println(movies[1][1])
 
 	// Array series
 	var series = [4]string{
