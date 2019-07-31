@@ -51,4 +51,34 @@ func main() {
 	primes := [6]int{2, 3, 5, 7, 11, 13}
 	fmt.Println("\nprimes number list:")
 	fmt.Println(primes)
+
+	// Slices // Array dinamico de n elementos
+	var heros = []string{
+		"Batman",
+		"Luke Cage",
+		"Wonder woman",
+		"Daredevil",
+		"IronMan",
+		"Thor",
+		"Captain America",
+		"Iron Fist",
+		"Jessica Jones"}
+
+	// Agregar nuevos elementos
+	heros = append(heros, "Superman")
+	heros = append(heros, "Flash")
+
+	fmt.Println("\nHeros list:")
+	fmt.Println(heros)
+
+	//Longitud del slice
+
+	fmt.Println("\nTota Heros:")
+	fmt.Println(len(heros))
+
+	//Tomar solo una cantidad de elementos delimitados
+
+	fmt.Println("\nParcial Heros list:")
+	fmt.Println(heros[8:11])
+
 }
