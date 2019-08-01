@@ -44,4 +44,19 @@ func main() {
 			fmt.Println("El numero es impar", i)
 		}
 	}
+
+	fmt.Println("\nImprimir segun elementos del slice o array\n" + "\n.............")
+
+	array_test := []string{"elemento 1", "elemento 2", "elemento 3", "elemento 4"}
+
+	for i := 0; i < len(array_test); i++ {
+
+		fmt.Println("Es "+array_test[i]+" Impresion numero ", i+1)
+	}
+
+	// For each
+
+	for _, array := range array_test {
+		fmt.Println(array)
+	}
 }
