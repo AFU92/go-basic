@@ -25,4 +25,12 @@ func main() {
 	} else {
 		fmt.Println("Eres menor de edad")
 	}
+
+	numero := 12
+
+	if numero%2 == 0 {
+		fmt.Println("Tu edad es par")
+	} else {
+		fmt.Println("Tu edad es impar")
+	}
 }
