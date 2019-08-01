@@ -26,11 +26,22 @@ func main() {
 		fmt.Println("Eres menor de edad")
 	}
 
-	numero := 12
-
-	if numero%2 == 0 {
+	if edad%2 == 0 {
 		fmt.Println("Tu edad es par")
 	} else {
 		fmt.Println("Tu edad es impar")
+	}
+
+	// Bucle for
+
+	fmt.Println("\nEvaluar si es para cada numero del 1 a tu edad\n" + "\n.............")
+
+	for i := 1; i <= edad; i++ {
+
+		if i%2 == 0 {
+			fmt.Println("El numero es par", i)
+		} else {
+			fmt.Println("El numero es impar", i)
+		}
 	}
 }
