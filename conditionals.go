@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"strconv"
+	"time"
 )
 
 // correr en la consola y enviar sus paramentros
@@ -58,5 +59,35 @@ func main() {
 
 	for _, array := range array_test {
 		fmt.Println(array)
+	}
+
+	// switch
+
+	fmt.Println("\nCalculando tu día con un switch")
+
+	moment := time.Now()
+
+	hoy := moment.Weekday()
+
+	fmt.Print("Hoy es ")
+
+	switch hoy {
+	case 0:
+		fmt.Println("Domingo")
+	case 1:
+		fmt.Println("lunes")
+	case 2:
+		fmt.Println("martes")
+	case 3:
+		fmt.Println("miercoles")
+	case 4:
+		fmt.Println("Jueves")
+	case 5:
+		fmt.Println("Viernes")
+	case 6:
+		fmt.Println("Sabado")
+	default:
+		fmt.Println("No se pudo calcular el día, comunicate con soporte xD")
+
 	}
 }
