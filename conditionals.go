@@ -1,11 +1,20 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+	"strconv"
+)
+
+// correr en la consola y enviar sus paramentros
+// go run conditionals.go Andrea 15
 
 func main() {
 	fmt.Println("Program")
 
-	edad := 25
+	fmt.Println("Hola " + os.Args[1] + "\nBienvenido a tu programa")
+
+	edad, _ := strconv.Atoi(os.Args[2])
 
 	if edad >= 18 && edad <= 99 && edad != 25 {
 		fmt.Println("Eres mayor de edad")
